@@ -1,0 +1,133 @@
+.nav-right,
+.detail-nav-actions {
+  align-items: center;
+  display: flex;
+}
+
+.nav-right {
+  gap: 20px;
+}
+
+.detail-nav-actions {
+  gap: 22px;
+}
+
+.language-switch {
+  align-items: center;
+  background: #f1f4f9;
+  border: 1px solid #d9e0ec;
+  border-radius: 999px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 2px;
+  padding: 3px;
+}
+
+.language-switch a {
+  border-radius: 999px;
+  color: #536176;
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 750;
+  justify-content: center;
+  letter-spacing: 0.015em;
+  line-height: 1;
+  min-width: 58px;
+  padding: 9px 11px;
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.language-switch a:hover {
+  color: #0d2748;
+  transform: translateY(-1px);
+}
+
+.language-switch a.is-active,
+.language-switch a[aria-current="page"] {
+  background: #0d2748;
+  box-shadow: 0 5px 14px rgba(13, 39, 72, 0.17);
+  color: #fff;
+}
+
+@media (max-width: 1140px) {
+  .nav-right {
+    gap: 12px;
+  }
+
+  .main-nav {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .menu-button {
+    display: block;
+  }
+
+  .main-nav {
+    align-items: stretch;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 18px 35px rgba(17, 33, 59, 0.1);
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    left: 0;
+    padding: 15px 24px 24px;
+    position: absolute;
+    right: 0;
+    top: 74px;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav a {
+    border-bottom: 1px solid var(--line);
+    padding: 13px 0;
+  }
+
+  .main-nav .nav-resume {
+    margin-top: 14px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .main-nav {
+    top: 66px;
+  }
+
+  .nav-right,
+  .detail-nav-actions {
+    gap: 9px;
+  }
+
+  .language-switch a {
+    min-width: 52px;
+    padding: 8px 9px;
+  }
+}
+
+@media (max-width: 520px) {
+  .detail-nav-actions .back-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 390px) {
+  .detail-nav-actions .back-link {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .language-switch a {
+    transition: none;
+  }
+}

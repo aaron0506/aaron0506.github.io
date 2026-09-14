@@ -3,7 +3,7 @@ const experiences = [
     id: "ibm-consulting",
     type: "experience",
     organization: "IBM Consulting",
-    role: "Consultant",
+    role: "Technical Consultant",
     period: "Current",
     location: "Greater China",
     category: "Enterprise Consulting",
@@ -13,53 +13,69 @@ const experiences = [
     creditName: "Dylan Gillis",
     creditUrl: "https://unsplash.com/photos/KdeqA3aTnBY",
     headline:
-      "Bringing structured thinking, quantitative analysis and an AI-native working style to enterprise consulting.",
+      "Turning digital platform data into management insight — and building AI tools that make that analysis self-service.",
     cardText:
-      "Current professional chapter focused on the intersection of strategy, data and technology.",
+      "Three independent deliverables: a silence-rate analysis of 179 issues, a self-built AI analytics platform, and a statistical model compendium spanning 14 methods.",
     overviewTitle:
-      "Current consulting work across strategy, data and technology.",
+      "Three independent deliverables. One consistent working method.",
     overview:
-      "Aaron is currently developing his professional practice at IBM Consulting. He brings together structured problem solving, quantitative analysis and clear communication to turn ambiguous business questions into organized workstreams and decision-ready outputs. This profile is intentionally high-level because client names, engagement contexts and deliverables are confidential.",
+      "At IBM Consulting, Aaron worked on a digital transformation platform engagement. Beyond day-to-day consulting work, he delivered three independent outputs: a quantitative issue-tracking analysis that introduced a new 'silence rate' metric to surface stalled progress; a self-built AI analytics tool that connected ERP and pipeline data to natural-language querying for business users; and a statistical model compendium applying 14 methods to profitability analytics across customer segmentation, forecasting, causal attribution and credit-risk quantification.",
     contributions: [
-      "Frame ambiguous business questions into clear analytical workstreams.",
-      "Connect research, data and stakeholder context to support practical decisions.",
-      "Translate complex working material into concise, decision-oriented consulting outputs.",
+      "Independently conceived and defined a 'silence rate' metric — beyond the team's existing tracking practices — to surface issues nominally marked as in-progress but effectively stalled with no updates.",
+      "Conducted 14 consecutive weeks of quantitative analysis across 179 issues on the digital transformation platform, revealing that 73.8% of open issues had gone silent and reported in-progress duration captured only 37% of actual dwell time.",
+      "Delivered weekly analytical reports with KPI dashboards, trend charts and stalled-issue profiling, equipping project leadership with a data-grounded view of true project health.",
+      "Led the design and independent development of an AI-driven data analytics platform connecting ERP contract execution data and sales pipeline data into a unified query interface.",
+      "Built a business metrics framework using XMind mind maps to guide Claude LLM in dynamically interpreting business questions, generating and executing calculation logic in a sandboxed runtime.",
+      "Enabled business users to directly interrogate underlying data systems in natural language — covering sales performance, contract execution and opportunity conversion — without technical mediation.",
+      "Implemented SSE streaming for real-time AI output, one-click HTML report generation and matplotlib chart embedding within the web interface.",
+      "Designed and documented a 4-topic statistical analytics methodology for energy and petrochemical profitability analysis, applying 14+ models to a dataset of 200 customers and 3,841 orders.",
+      "Applied GMM and KMeans for customer tier segmentation, KDE and significance tests for distribution analysis, and Apriori association rules for cross-sell pattern mining.",
+      "Built and evaluated forecasting models including GAM, BSTS, a GAM-BSTS hybrid and XGBoost, comparing performance across R², MAPE and confidence-interval coverage.",
+      "Conducted SHAP-based causal attribution and LASSO regularization path analysis to identify stable margin drivers and their time-varying contributions.",
     ],
     approach: [
       {
-        title: "Frame",
-        text: "Clarify the business decision, define the central question and establish a practical workplan.",
-      },
-      {
         title: "Diagnose",
-        text: "Bring together data, research and stakeholder inputs to isolate the signals that matter.",
+        text: "Defined novel metrics (silence rate, dwell-time delta) to surface the structural gap between reported and actual project progress.",
       },
       {
-        title: "Deliver",
-        text: "Turn the evidence into a clear recommendation and executable next step.",
+        title: "Build",
+        text: "Designed and independently developed the AI analytics platform end-to-end — server, sandboxed code execution, streaming UI and report generation.",
+      },
+      {
+        title: "Enable",
+        text: "Delivered both outputs as decision-ready tools: weekly management reports and a self-service analytics interface for business users.",
       },
     ],
     tools: [
-      "Structured Problem Solving",
-      "Enterprise Transformation",
-      "Data & AI",
+      "LLM Integration (Claude API)",
+      "Python Full-Stack",
+      "ERP & Business Data",
+      "Quantitative Issue Analysis",
+      "SSE Streaming",
+      "Data Visualisation",
+      "Project Health Metrics",
       "Stakeholder Communication",
-      "Executive Storylining",
+      "GAM / BSTS / XGBoost",
+      "SHAP Attribution",
+      "LASSO Regularization",
+      "Statistical Modelling",
     ],
     metrics: [
-      ["Current role", "IBM Consulting"],
-      ["Structured", "Problem solving"],
-      ["Integrated", "Strategy · data · technology"],
+      ["179 issues", "14-week tracking"],
+      ["73.8%", "Silence rate identified"],
+      ["AI platform", "Built independently"],
+      ["14+ models", "Statistical compendium"],
     ],
     visual: {
-      input: "Business questions and stakeholder context",
-      method: "Structured analysis and evidence synthesis",
-      output: "Decision-ready consulting outputs",
+      input: "ERP contract data, sales pipeline, issue backlog",
+      method: "Silence-rate analysis + LLM Code Interpreter pipeline",
+      output: "Management reports + self-service AI analytics tool",
       dimensions: [
-        "Problem framing",
-        "Evidence synthesis",
-        "Stakeholder context",
-        "Executive storylining",
+        "Issue health tracking",
+        "Silence rate analysis",
+        "AI natural language query",
+        "Automated report generation",
       ],
     },
   },
@@ -2586,7 +2602,7 @@ function renderAirportCase(experience, next) {
             <div>
               <span>Photography</span>
               <a href="https://commons.wikimedia.org/wiki/File:Shenzhen_Bao%27an_International_Airport_Terminal_3_in_September_2025.jpg" target="_blank" rel="noreferrer">Terminal 3 · Renek78 · CC0 ↗</a>
-              <a href="https://commons.wikimedia.org/wiki/File:Shenzhen_Bao%27an_International_Airport_Arrival_hall_20140324.JPG" target="_blank" rel="noreferrer">Arrival hall · 颐园新居 · CC BY-SA 3.0 ↗</a>
+              <a href="https://commons.wikimedia.org/wiki/File:Shenzhen_Bao%27an_International_Airport_Arrival_hall_20140324.JPG" target="_blank" rel="noreferrer">Arrival hall · CC BY-SA 3.0 ↗</a>
             </div>
           </div>
         </div>
@@ -2926,6 +2942,451 @@ function renderGuosenCase(experience, next) {
   `;
 }
 
+function renderIBMCase(experience, next) {
+  const target = document.getElementById("experienceContent");
+  document.body.classList.add("ibm-case-page");
+  document.title = "IBM Consulting | Aaron Li";
+
+  target.innerHTML = `
+    <article class="ibm-case">
+
+      <section class="ibm-hero">
+        <div class="ibm-hero-grid-bg" aria-hidden="true"></div>
+        <div class="container ibm-hero-layout">
+          <div class="ibm-hero-copy" data-reveal>
+            <p class="ibm-kicker">Technical Consultant · IBM Consulting · Greater China</p>
+            <h1>Three independent deliverables. One working method.</h1>
+            <p class="ibm-hero-lede">
+              I quantified a structural blind spot in project health tracking, built an AI analytics platform from scratch, and developed a complete statistical model compendium spanning 14 methods across four analytical domains.
+            </p>
+            <div class="ibm-hero-meta">
+              <div><span>Role</span><strong>${experience.role}</strong></div>
+              <div><span>Period</span><strong>${experience.period}</strong></div>
+              <div><span>Location</span><strong>${experience.location}</strong></div>
+            </div>
+          </div>
+          <div class="ibm-hero-cards" data-reveal>
+            <div class="ibm-output-card">
+              <span>OUTPUT 01</span>
+              <strong>Issue Health Analysis</strong>
+              <p>14 weeks · 179 issues · silence rate framework</p>
+              <div class="ibm-output-stat">
+                <b>73.8%</b>
+                <i>of open issues identified as silently stalled</i>
+              </div>
+            </div>
+            <div class="ibm-output-card ibm-output-card-dark">
+              <span>OUTPUT 02</span>
+              <strong>AI Analytics Platform</strong>
+              <p>ERP + pipeline data · LLM Code Interpreter</p>
+              <div class="ibm-output-stat">
+                <b>NL query</b>
+                <i>to chart-embedded report, zero code</i>
+              </div>
+            </div>
+            <div class="ibm-output-card">
+              <span>OUTPUT 03</span>
+              <strong>Statistical Model Compendium</strong>
+              <p>14+ methods · profitability analytics framework</p>
+              <div class="ibm-output-stat">
+                <b>14+</b>
+                <i>models across statistics, forecasting, attribution and risk</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="ibm-nav" aria-label="IBM case sections">
+        <div class="container">
+          <span>IBM Consulting · 2026</span>
+          <div>
+            <a href="#ibm-output1">Issue Analysis</a>
+            <a href="#ibm-output2">AI Platform</a>
+            <a href="#ibm-output3">Models</a>
+            <a href="#ibm-method">Architecture</a>
+            <a href="#ibm-capability">Capabilities</a>
+          </div>
+        </div>
+      </nav>
+
+      <section class="ibm-output1" id="ibm-output1">
+        <div class="container">
+          <div class="ibm-section-head" data-reveal>
+            <span>01</span>
+            <div>
+              <p>Issue backlog analysis</p>
+              <h2>Measure what the status field doesn't show.</h2>
+            </div>
+          </div>
+
+          <div class="ibm-insight-grid">
+            <div class="ibm-insight-copy" data-reveal>
+              <span class="ibm-label">THE BLIND SPOT</span>
+              <h3>Issues marked "in-progress" were effectively frozen.</h3>
+              <p>
+                The project's existing tracking recorded whether an issue was
+                open or closed. It did not distinguish between issues being
+                actively worked and issues that had simply not been updated.
+                I defined <strong>silence rate</strong> — the share of open
+                issues with no activity for three or more consecutive periods —
+                as a direct measure of that gap.
+              </p>
+              <div class="ibm-metric-row">
+                <div><strong>73.8%</strong><span>of open issues silently stalled</span></div>
+                <div><strong>37%</strong><span>of actual dwell time captured by current metric</span></div>
+                <div><strong>63 days</strong><span>median silent duration (stalled issues)</span></div>
+              </div>
+            </div>
+            <figure class="ibm-chart-figure" data-reveal>
+              <div class="ibm-chart-frame">
+                <img
+                  src="assets/images/ibm-consulting/issue-analysis-chart.png"
+                  alt="Issue tracking analysis chart showing silence rate and dwell time distribution"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption><span>FIG. 01</span> Issue health analysis — silence rate and dwell-time gap</figcaption>
+            </figure>
+          </div>
+
+          <div class="ibm-finding-strip" data-reveal>
+            <div>
+              <span>REPORTED DWELL TIME</span>
+              <strong>28.1 days avg.</strong>
+              <p>What the current metric showed</p>
+            </div>
+            <div class="ibm-arrow-cell" aria-hidden="true">→</div>
+            <div>
+              <span>ACTUAL DWELL TIME</span>
+              <strong>75.5 days avg.</strong>
+              <p>Full time since issue was first raised</p>
+            </div>
+            <div class="ibm-arrow-cell ibm-gap-label" aria-hidden="true">
+              <strong>−47.3 days</strong>
+              <span>systematic undercount</span>
+            </div>
+          </div>
+
+          <div class="ibm-status-breakdown" data-reveal>
+            <span class="ibm-label">SILENCE RATE BY STATUS</span>
+            <div class="ibm-status-bars">
+              ${[
+                ["Already-processed, awaiting re-test", "90.0%", 90],
+                ["Converted to requirement", "86.4%", 86],
+                ["In progress", "57.5%", 58],
+                ["On hold", "100%", 100],
+              ]
+                .map(
+                  ([label, pct, width]) => `
+                    <div>
+                      <header><span>${label}</span><strong>${pct}</strong></header>
+                      <i><b style="width:${width}%"></b></i>
+                    </div>
+                  `,
+                )
+                .join("")}
+            </div>
+            <p class="ibm-status-note">
+              Issues in "processed, awaiting re-test" had a 90% silence rate —
+              the highest of any category — revealing that handoffs were
+              completing on paper but not being followed through in practice.
+            </p>
+          </div>
+
+          <div class="ibm-weekly-grid" data-reveal>
+            <span class="ibm-label">14-WEEK THROUGHPUT TREND</span>
+            <div class="ibm-weekly-chart" role="img" aria-label="Weekly new and closed issue counts over 14 periods">
+              ${[
+                [56,15],[14,4],[13,16],[24,8],[18,6],[8,10],[2,3],[3,4],[15,7],[6,2],[3,0],[7,5],[5,3],[5,0]
+              ].map(([added, closed], i) => `
+                <div class="ibm-week-col">
+                  <div class="ibm-week-bar-wrap">
+                    <div class="ibm-bar-added" style="height:${Math.round(added/56*100)}%" title="New: ${added}"></div>
+                    <div class="ibm-bar-closed" style="height:${Math.round(closed/56*100)}%" title="Closed: ${closed}"></div>
+                  </div>
+                  <span>W${i+1}</span>
+                </div>
+              `).join("")}
+            </div>
+            <div class="ibm-chart-legend">
+              <i class="ibm-dot-added"></i><span>New issues</span>
+              <i class="ibm-dot-closed"></i><span>Closed issues</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ibm-output2" id="ibm-output2">
+        <div class="container">
+          <div class="ibm-section-head ibm-section-head-light" data-reveal>
+            <span>02</span>
+            <div>
+              <p>AI data analytics platform</p>
+              <h2>Ask a business question. Get a chart-embedded answer.</h2>
+            </div>
+          </div>
+
+          <div class="ibm-platform-overview" data-reveal>
+            <div class="ibm-platform-copy">
+              <span class="ibm-label ibm-label-light">THE PROBLEM</span>
+              <h3>Data was available. Querying it required a data analyst.</h3>
+              <p>
+                Sales performance, contract execution and opportunity conversion
+                data lived in ERP and pipeline systems. Extracting any signal
+                required technical mediation — a question asked, a report
+                requested, a delay accepted. The tool I built removed that
+                dependency entirely.
+              </p>
+            </div>
+            <div class="ibm-platform-flow" data-reveal>
+              ${[
+                ["Business question", "Natural language, e.g. 'Which sales rep has the lowest win rate?'"],
+                ["AI planning stage", "Claude reads the XMind metrics framework and decides whether to compute, clarify or decline"],
+                ["Code generation", "Model generates Python calculation code targeting contract + pipeline tables"],
+                ["Sandboxed execution", "Code runs in an isolated runtime; results and charts are captured"],
+                ["Streaming answer", "Conclusion text streams to the browser with inline charts via SSE"],
+              ].map(([title, desc], i) => `
+                <div class="ibm-flow-step" data-reveal>
+                  <span>${String(i+1).padStart(2,"0")}</span>
+                  <div>
+                    <strong>${title}</strong>
+                    <p>${desc}</p>
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+          <div class="ibm-tech-grid">
+            <article class="ibm-tech-card" data-reveal>
+              <span class="ibm-label">DATA LAYER</span>
+              <h3>ERP contracts + sales pipeline</h3>
+              <p>
+                Contract execution records and opportunity pipeline data are
+                loaded as in-memory tables. The XMind mind-map exports define
+                the business metric vocabulary — what "win rate", "contract
+                execution rate" and "revenue per rep" mean in terms of the
+                actual fields.
+              </p>
+              <div class="ibm-tech-tags">
+                <i>CSV / ERP extract</i>
+                <i>XMind metrics framework</i>
+                <i>Two-table schema</i>
+              </div>
+            </article>
+            <article class="ibm-tech-card ibm-tech-card-blue" data-reveal>
+              <span class="ibm-label">AI LAYER</span>
+              <h3>Two-stage LLM pipeline</h3>
+              <p>
+                Stage 1: Claude reads the metrics tree and data schema, decides
+                what to compute, and generates Python code. Stage 2: after
+                sandboxed execution returns real numbers, Claude streams a
+                structured business answer with chart placeholders.
+              </p>
+              <div class="ibm-tech-tags">
+                <i>Claude claude-opus-5</i>
+                <i>Dynamic code generation</i>
+                <i>Sandboxed exec + SSE</i>
+              </div>
+            </article>
+            <article class="ibm-tech-card" data-reveal>
+              <span class="ibm-label">OUTPUT LAYER</span>
+              <h3>Reports and real-time answers</h3>
+              <p>
+                Ad-hoc questions stream answers with inline matplotlib charts.
+                The report generator plans chapter structure, executes code
+                per chapter, writes analysis prose and assembles a complete
+                styled HTML document — executable from a single button click.
+              </p>
+              <div class="ibm-tech-tags">
+                <i>matplotlib (Agg)</i>
+                <i>HTML report output</i>
+                <i>Multi-turn session memory</i>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="ibm-output3" id="ibm-output3">
+        <div class="container">
+          <div class="ibm-section-head" data-reveal>
+            <span>03</span>
+            <div>
+              <p>Statistical model compendium</p>
+              <h2>A 4-topic analytics methodology — from customer segmentation to risk quantification.</h2>
+            </div>
+          </div>
+
+          <div class="ibm-model-intro" data-reveal>
+            <span class="ibm-label">THE DELIVERABLE</span>
+            <p class="ibm-model-intro-text">
+              Built and documented a complete statistical and machine-learning analytics framework
+              applied to energy and petrochemical profitability data — covering 200 customers,
+              3,841 orders and 14 methods across four analytical domains.
+            </p>
+            <div class="ibm-model-topic-grid">
+              ${[
+                ["01", "Statistical Analysis", "GMM segmentation · KDE · significance tests · association rules · correlation"],
+                ["02", "Forecasting", "GAM · BSTS · GAM-BSTS hybrid · XGBoost"],
+                ["03", "Attribution", "SHAP global & time-series · LASSO variable selection"],
+                ["04", "Risk Control", "Markov chain PD · Bayesian network · ECL · Monte Carlo CVaR"],
+              ].map(([num, title, desc]) => `
+                <div class="ibm-model-topic">
+                  <span>${num}</span>
+                  <strong>${title}</strong>
+                  <p>${desc}</p>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+          <div class="ibm-model-figure-grid">
+            ${[
+              ["chart_gmm.png", "GMM customer segmentation identifying 4 customer tiers and 5 boundary accounts", "FIG. 01", "Customer segmentation · KMeans + GMM"],
+              ["chart_corr.png", "Correlation analysis — payment terms linked to discount rates (+0.74) and overdue rates (+0.79)", "FIG. 02", "Pearson & Spearman correlation"],
+              ["gam_partial_effects.png", "GAM partial effects — nonlinear margin drivers including oil price, raw material cost and FX rate", "FIG. 03", "GAM partial effects (R² = 0.852)"],
+              ["gam_test_zoom.png", "GAM-BSTS hybrid model test performance — MAPE 0.78%, 95% CI coverage 100%", "FIG. 04", "GAM-BSTS test fit"],
+              ["shap_timeseries.png", "SHAP time-series attribution — stacked contributions showing post-2028 growth driver shift", "FIG. 05", "SHAP attribution over time"],
+              ["lasso_path.png", "LASSO regularization path — seasonality and material cost stable; oil price contribution unstable at high λ", "FIG. 06", "LASSO variable selection path"],
+            ].map(([file, alt, figNum, caption]) => `
+              <figure class="ibm-model-fig" data-reveal>
+                <div class="ibm-model-fig-frame">
+                  <img
+                    src="assets/images/ibm-models/${file}"
+                    alt="${alt}"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption><span>${figNum}</span> ${caption}</figcaption>
+              </figure>
+            `).join("")}
+          </div>
+        </div>
+      </section>
+
+      <section class="ibm-method" id="ibm-method">
+        <div class="container">
+          <div class="ibm-section-head" data-reveal>
+            <span>04</span>
+            <div>
+              <p>System architecture</p>
+              <h2>One Python file. A complete data-to-insight loop.</h2>
+            </div>
+          </div>
+
+          <div class="ibm-arch-diagram" data-reveal>
+            <div class="ibm-arch-row">
+              <div class="ibm-arch-node ibm-arch-input">
+                <span>INPUT</span>
+                <strong>XMind + CSV data</strong>
+                <p>Mind-map metric vocabulary and ERP tables</p>
+              </div>
+              <div class="ibm-arch-arrow">→</div>
+              <div class="ibm-arch-node ibm-arch-plan">
+                <span>PLAN</span>
+                <strong>Claude: compute / clarify / refuse</strong>
+                <p>Model decides how to answer and generates code</p>
+              </div>
+              <div class="ibm-arch-arrow">→</div>
+              <div class="ibm-arch-node ibm-arch-exec">
+                <span>EXECUTE</span>
+                <strong>Sandboxed Python</strong>
+                <p>Thread-isolated exec with restricted builtins</p>
+              </div>
+              <div class="ibm-arch-arrow">→</div>
+              <div class="ibm-arch-node ibm-arch-output">
+                <span>OUTPUT</span>
+                <strong>SSE stream + charts</strong>
+                <p>Real-time answer with inline matplotlib figures</p>
+              </div>
+            </div>
+            <div class="ibm-arch-note">
+              <strong>Security model:</strong> sandboxed runtime exposes only <code>contracts</code>, <code>opps</code>, <code>json</code>, <code>re</code>, <code>math</code>, <code>plt</code> — no filesystem, no imports, thread-timeout enforced.
+            </div>
+          </div>
+
+          <div class="ibm-compare-grid">
+            <div data-reveal>
+              <span class="ibm-label">BEFORE</span>
+              <h3>Data question → analyst → wait → answer</h3>
+              <ul>
+                <li>Business user identifies a question</li>
+                <li>Raises request to data team</li>
+                <li>Analyst queries, formats, responds</li>
+                <li>Delay of hours to days per query</li>
+              </ul>
+            </div>
+            <div class="ibm-compare-arrow" aria-hidden="true">→</div>
+            <div data-reveal>
+              <span class="ibm-label">AFTER</span>
+              <h3>Data question → type it → get the answer</h3>
+              <ul>
+                <li>Business user types the question in natural language</li>
+                <li>AI generates, executes and explains in seconds</li>
+                <li>Charts embedded inline, report downloadable</li>
+                <li>No technical mediation required</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ibm-capability" id="ibm-capability">
+        <div class="container">
+          <div class="ibm-section-head ibm-section-head-light" data-reveal>
+            <span>05</span>
+            <div>
+              <p>Capability evidence</p>
+              <h2>What these three deliverables demonstrate.</h2>
+            </div>
+          </div>
+
+          <div class="ibm-cap-grid">
+            <article data-reveal>
+              <span>01</span>
+              <h3>Independent problem framing</h3>
+              <p>Both deliverables were self-initiated. The silence rate metric was conceived and defined without a brief; the AI platform was scoped and built without a technical team.</p>
+            </article>
+            <article data-reveal>
+              <span>02</span>
+              <h3>Quantitative analysis for management</h3>
+              <p>The issue analysis translated raw tracking data into a management-ready view of project health, with metrics that could not be read from the existing dashboard.</p>
+            </article>
+            <article data-reveal>
+              <span>03</span>
+              <h3>AI-native product development</h3>
+              <p>The analytics platform is a complete working product — not a prototype — built on an LLM Code Interpreter architecture that handles edge cases, session memory and report generation.</p>
+            </article>
+            <article data-reveal>
+              <span>04</span>
+              <h3>Business-to-technical translation</h3>
+              <p>Both outputs required understanding the business context first — what project managers needed to know, what sales operations needed to ask — before making a technical decision.</p>
+            </article>
+          </div>
+
+          <p class="ibm-confidential" data-reveal>
+            Client name, engagement context, project scope and deliverable
+            details are intentionally omitted. This page describes Aaron's
+            independent contributions and working method only.
+          </p>
+        </div>
+      </section>
+
+      <section class="next-experience ibm-next">
+        <a href="experience.html?id=${next.id}">
+          <div class="container">
+            <span>Next experience</span>
+            <strong>${next.organization} →</strong>
+          </div>
+        </a>
+      </section>
+    </article>
+  `;
+}
+
 function renderExperience() {
   const target = document.getElementById("experienceContent");
   if (!target) return;
@@ -2946,7 +3407,14 @@ function renderExperience() {
     "astri-case-page",
     "szx-case-page",
     "guosen-case-page",
+    "ibm-case-page",
   );
+
+  if (experience.id === "ibm-consulting") {
+    renderIBMCase(experience, next);
+    setupDetailMotion();
+    return;
+  }
 
   if (experience.id === "ries-consulting") {
     renderRiesCase(experience, next);
